@@ -23,22 +23,17 @@ public class MainActivity extends AppCompatActivity {
         button1=(Button) findViewById(R.id.button);
         button2=(Button) findViewById(R.id.button2);
         relativeLayout=(RelativeLayout)findViewById(R.id.relativelayout);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                relativeLayout.setBackgroundColor(Color.GREEN);
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                relativeLayout.setBackgroundColor(Color.BLUE);
-            }
-        });
-
-    }
-
 
 
     }
+
+
+    public void setblue(View view) {
+        relativeLayout.setBackgroundColor(Color.BLUE);
+    }
+
+    public void setgreen(View view) {
+    relativeLayout.setBackgroundColor(Color.GREEN);
+    }
+}
 
