@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName() ;
     private Button button1,button2;
     private RelativeLayout relativeLayout;
@@ -23,26 +23,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button1=(Button) findViewById(R.id.button);
         button2=(Button) findViewById(R.id.button2);
         relativeLayout=(RelativeLayout)findViewById(R.id.relativelayout);
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
-
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()){
-
-            case R.id.button:
-                relativeLayout.setBackgroundColor(Color.BLACK);
-                Log.i(TAG,"Black background");
-                break;
-            case R.id.button2:
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 relativeLayout.setBackgroundColor(Color.GREEN);
-                Log.i(TAG,"green background");
-
-                break;
-
-        }
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                relativeLayout.setBackgroundColor(Color.BLUE);
+            }
+        });
 
     }
-}
+
+
+
+    }
+
