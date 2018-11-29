@@ -30,10 +30,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =new Intent(MainActivity.this,Second_Acticity.class);
 
-                Bundle b = new Bundle();
-                b.putString("name",editText.getText().toString());
-                b.putInt("age",23);
-                intent.putExtras(b);
+              intent.putExtra("name",editText.getText().toString());
+              intent.putExtra("age",23);
                 startActivity(intent);
             }
         });
