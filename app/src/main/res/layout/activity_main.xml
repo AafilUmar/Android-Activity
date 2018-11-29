@@ -5,6 +5,7 @@
     android:id="@+id/relativelayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
     <Button
@@ -28,6 +29,6 @@
         android:layout_marginTop="147dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="" />
 
 </RelativeLayout>
